@@ -5,9 +5,7 @@ MAINTAINER Stinkeste Sébastien
 
 RUN apt-get update && apt-get install -y nano vim wget  default-jdk && \ 
     keytool -keystore keystore -keysize 2048 -alias tomcat -genkey -keyalg RSA -keypass password -storepass password -dname "CN=Unknown, OU=Unknown, O=Unknown,L=Unknown, ST=Unknown, C=Unknown"
-    # keytool -genkey -alias tomcat -dname "CN=cas.univ-xxx.fr,OU=X,O=Y,L=Z,S=XY,C=YZ" -keyalg RSA -keypass password -storepass password -keystore cacerts
-
-ENV MAVEN_VERSION apache-maven-3.3.9
+   
 ENV CAS_VERSION v3.5.3
 ENV CAS_DIR_NAME cas-3.5.3
 
