@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y nano vim wget  default-jdk && \
    
 ENV CAS_VERSION v3.5.3
 ENV CAS_DIR_NAME cas-3.5.3
-
+ENV MAVEN_VERSION apache-maven-3.3.9
 
 RUN wget http://apache.mindstudios.com/maven/maven-3/3.3.9/binaries/${MAVEN_VERSION}-bin.tar.gz && \
     tar -xvf ${MAVEN_VERSION}-bin.tar.gz && \
