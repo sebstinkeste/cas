@@ -115,11 +115,11 @@
     <property name="authenticationHandlers">
       <list>
 
-        <bean class="org.jasig.cas.adaptors.ldap.BindLdapAuthenticationHandler"
+       <!--  <bean class="org.jasig.cas.adaptors.ldap.BindLdapAuthenticationHandler"
           p:filter="sAMAccountName=%u"
-          p:searchBase=${}
+          p:searchBase="cn=Users,dc=mathieu,dc=local"
           p:contextSource-ref="contextSource"
-          p:ignorePartialResultException="true" />
+          p:ignorePartialResultException="true" /> -->
         <!--
           | This is the authentication handler that authenticates services by means of callback via SSL, thereby validating
           | a server side SSL certificate.
@@ -204,7 +204,7 @@
 
   <bean id="auditTrailManager" class="com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager" />
   
-  <bean id="contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+<!--   <bean id="contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
     <property name="pooled" value="false"/>
     <property name="url" value=${} />
     <property name="userDn" value=${}/>
@@ -216,7 +216,7 @@
         <entry key="java.naming.security.authentication" value="simple" />
       </map>
     </property>
-  </bean>
+  </bean> -->
 
   <bean id="healthCheckMonitor" class="org.jasig.cas.monitor.HealthCheckMonitor">
     <property name="monitors">
