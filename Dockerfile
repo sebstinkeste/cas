@@ -1,4 +1,3 @@
-FROM java:7-jdk
 FROM tomcat:7.0
 
 MAINTAINER Stinkeste Sébastien
